@@ -1,5 +1,5 @@
 
-name: test helloflask/bootstrap-flask
+name: test maxcountryman/flask-login
 
 on:
   push:
@@ -26,8 +26,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install bootstrap-flask flask
+          pip install flask-login flask
 
       - name: Test import
         run:
-          python -c "from flask_bootstrap import Bootstrap5"
+          python -c "from flask_login import LoginManager"
