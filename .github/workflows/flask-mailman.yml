@@ -1,4 +1,4 @@
-name: Test latest Flask-Mailman with latest Flask
+name: test Flask-Mailman
 
 on:
   push:
