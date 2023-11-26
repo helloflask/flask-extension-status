@@ -1,5 +1,5 @@
 
-name: test helloflask/flask-ckeditor
+name: build
 
 on:
   push:

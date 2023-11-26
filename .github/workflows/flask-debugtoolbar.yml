@@ -1,5 +1,5 @@
 
-name: test pallets-eco/flask-debugtoolbar
+name: build
 
 on:
   push:

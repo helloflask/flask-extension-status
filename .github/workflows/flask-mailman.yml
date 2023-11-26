@@ -1,5 +1,5 @@
 
-name: test waynerv/flask-mailman
+name: build
 
 on:
   push:
