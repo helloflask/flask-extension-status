@@ -1,4 +1,4 @@
-name: test flask-mailman
+name: test bootstrap-flask
 
 on:
   push:
@@ -25,8 +25,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install flask-mailman flask
+          pip install bootstrap-flask flask
 
       - name: Test
         run:
-          python -c "from flask_mailman import Mail"
+          python -c "from flask_bootstrap import Bootstrap5"
