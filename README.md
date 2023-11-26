@@ -8,7 +8,6 @@
 
 | Extension | Latest PyPI version | Build with Flask 3.x |
 | --------- | -------------------- | ------------------- |
-| [Flask-Mailman](https://github.com/waynerv/flask-mailman) | ![PyPI - Version](https://img.shields.io/pypi/v/flask-mailman)
- | ![Test stauts with latest Flask](https://github.com/greyli/flask-extension-status/actions/workflows/flask-mailman.yml/badge.svg) |
+| [Flask-Mailman](https://github.com/waynerv/flask-mailman) | ![PyPI - Version](https://img.shields.io/pypi/v/flask-mailman) | ![](https://github.com/greyli/flask-extension-status/actions/workflows/flask-mailman.yml/badge.svg) |
 
 ## Unmaintained extension and alternatives
