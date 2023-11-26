@@ -1,19 +1,12 @@
 from pathlib import Path
 
 from jinja2 import Template
+import yaml
 
 basedir = Path(__file__).parent
 
-extensions = {
-    'bootstrap-flask': { 'repo': 'helloflask/bootstrap-flask', 'import_string': 'from flask_bootstrap import Bootstrap5'},
-    'flask-ckeditor': { 'repo': 'helloflask/flask-ckeditor', 'import_string': 'from flask_ckeditor import CKEditor'},
-    'flask-debugtoolbar': { 'repo': 'pallets-eco/flask-debugtoolbar', 'import_string': 'from flask_debugtoolbar import DebugToolbarExtension'},
-    'flask-login': {'repo': 'maxcountryman/flask-login', 'import_string': 'from flask_login import LoginManager'},
-    'flask-mailman': { 'repo': 'waynerv/flask-mailman', 'import_string': 'from flask_mailman import Mail'},
-}
-
 workflow_template = """
-name: test {{ repo }}
+name: build
 
 on:
   push:
@@ -49,14 +42,20 @@ jobs:
 """
 
 table_header = """
-| Extension | Latest PyPI version  | PyPI downloads/month | Build with Flask 3.x |
-| --------- | -------------------- | -------------------- | -------------------- |"""
+| Extension Repository | Latest version  |  Downloads | Build with latest Flask (3.x) |
+| -------------------- | --------------- | ---------- | ----------------------------- |"""
 
 table_row_template = "| [{{ repo }}](https://github.com/{{ repo }}) " \
 "| ![PyPI - Version](https://img.shields.io/pypi/v/{{ package_name }}) " \
-"| ![PyPI - Downloads](https://img.shields.io/pypi/dm/{{ package_name }}?color=black) " \
+"| ![PyPI - Downloads](https://img.shields.io/pypi/dm/{{ package_name }}?color=darkgrey) " \
 "| ![build](https://github.com/greyli/flask-extension-status/actions/workflows/{{ package_name }}.yml/badge.svg) |"
 
+
+def get_extensions():
+    """get extensions info from extensions.yml"""
+    with open(basedir / 'extensions.yml') as f:
+        return yaml.safe_load(f)
+    
 
 def gen_workflow(package_name, repo, import_string):
     template = Template(workflow_template)
@@ -71,7 +70,7 @@ def update_readme_table():
     readme_file = basedir / 'README.md'
     
     new_table = ''
-    for package_name, info in extensions.items():
+    for package_name, info in get_extensions().items():
         repo = info['repo']
         new_table += Template(table_row_template).render(
             package_name=package_name,
@@ -100,7 +99,7 @@ def update_readme_table():
 
 
 if __name__ == '__main__':
-    for package_name, info in extensions.items():
+    for package_name, info in get_extensions().items():
         repo = info['repo']
         import_string = info['import_string']
         workflow = gen_workflow(package_name, repo, import_string)
