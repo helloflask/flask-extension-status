@@ -1,5 +1,5 @@
 
-name: test helloflask/bootstrap-flask
+name: build
 
 on:
   push:

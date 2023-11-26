@@ -1,5 +1,5 @@
 
-name: test maxcountryman/flask-login
+name: build
 
 on:
   push:
