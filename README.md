@@ -50,4 +50,6 @@ Commit and push the changes, then create a pull request.
 
 ## What can I do to help?
 
+## Common compatibility issues
+
 ## Unmaintained extension and alternatives
