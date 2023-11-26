@@ -5,8 +5,7 @@ from jinja2 import Template
 basedir = Path(__file__).parent
 
 extensions = {
-    'apiflask': {'repo': 'apiflask/apiflask', 'import_string': 'from apiflask import APIFlask'},
-    'bootstrap-flask': { 'repo': 'helloflask/bootstrap-flask', 'import_string': 'from apiflask import APIFlask'},
+    'bootstrap-flask': { 'repo': 'helloflask/bootstrap-flask', 'import_string': 'from flask_bootstrap import Bootstrap5'},
     'flask-ckeditor': { 'repo': 'helloflask/flask-ckeditor', 'import_string': 'from flask_ckeditor import CKEditor'},
     'flask-debugtoolbar': { 'repo': 'pallets-eco/flask-debugtoolbar', 'import_string': 'from flask_debugtoolbar import DebugToolbarExtension'},
     'flask-login': {'repo': 'maxcountryman/flask-login', 'import_string': 'from flask_login import LoginManager'},

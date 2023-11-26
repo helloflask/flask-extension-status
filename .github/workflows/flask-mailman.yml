@@ -1,4 +1,5 @@
-name: test flask-mailman
+
+name: test waynerv/flask-mailman
 
 on:
   push:
@@ -27,6 +28,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install flask-mailman flask
 
-      - name: Test
+      - name: Test import
         run:
           python -c "from flask_mailman import Mail"
