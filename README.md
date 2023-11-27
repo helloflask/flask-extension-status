@@ -12,8 +12,8 @@ Want to help a Flask extension? Check the [What can I do to help?](#what-can-i-d
 
 <!-- TABLE_START -->
 
-| Extension Repository | Latest version  |  Downloads | Build with latest Flask (3.x) |
-| -------------------- | --------------- | ---------- | ----------------------------- |
+| Extension Repository | Latest version  |  Downloads | Build with latest Flask (3.x) and Python (3.12.x) |
+| -------------------- | --------------- | ---------- | ------------------------------------------------- |
 | [helloflask/bootstrap-flask](https://github.com/helloflask/bootstrap-flask) | ![PyPI - Version](https://img.shields.io/pypi/v/bootstrap-flask) | ![PyPI - Downloads](https://img.shields.io/pypi/dm/bootstrap-flask?color=darkgrey) | ![build](https://github.com/greyli/flask-extension-status/actions/workflows/bootstrap-flask.yml/badge.svg) |
 | [jmcarp/flask-apispec](https://github.com/jmcarp/flask-apispec) | ![PyPI - Version](https://img.shields.io/pypi/v/flask-apispec) | ![PyPI - Downloads](https://img.shields.io/pypi/dm/flask-apispec?color=darkgrey) | ![build](https://github.com/greyli/flask-extension-status/actions/workflows/flask-apispec.yml/badge.svg) |
 | [miracle2k/flask-assets](https://github.com/miracle2k/flask-assets) | ![PyPI - Version](https://img.shields.io/pypi/v/flask-assets) | ![PyPI - Downloads](https://img.shields.io/pypi/dm/flask-assets?color=darkgrey) | ![build](https://github.com/greyli/flask-extension-status/actions/workflows/flask-assets.yml/badge.svg) |
