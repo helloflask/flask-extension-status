@@ -44,7 +44,7 @@ table_header = """
 table_row_template = "| [{{ repo }}](https://github.com/{{ repo }}) " \
 "| ![PyPI - Version](https://img.shields.io/pypi/v/{{ package_name }}) " \
 "| ![PyPI - Downloads](https://img.shields.io/pypi/dm/{{ package_name }}?color=darkgrey) " \
-"| ![build](https://github.com/greyli/flask-extension-status/actions/workflows/{{ package_name }}.yml/badge.svg) |"
+"| [![build](https://github.com/greyli/flask-extension-status/actions/workflows/{{ package_name }}.yml/badge.svg)](https://github.com/greyli/flask-extension-status/actions/workflows/{{ package_name }}.yml) |"
 
 
 def get_extensions():
