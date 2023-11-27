@@ -1,5 +1,5 @@
 
-name: build
+name: flask-mailman
 
 on:
   push:

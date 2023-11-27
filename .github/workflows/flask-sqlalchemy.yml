@@ -1,5 +1,5 @@
 
-name: flask-moment
+name: flask-sqlalchemy
 
 on:
   push:
@@ -22,8 +22,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install flask-moment flask
+          pip install flask-sqlalchemy flask
 
       - name: Test initialization
         run:
-          python -c "from flask import Flask; app = Flask(__name__); from flask_moment import Moment; Moment(app)"
+          python -c "from flask import Flask; app = Flask(__name__); from flask_sqlalchemy import SQLAlchemy; app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'; db = SQLAlchemy(app)"

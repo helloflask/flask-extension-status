@@ -6,7 +6,7 @@ import yaml
 basedir = Path(__file__).parent
 
 workflow_template = """
-name: build
+name: {{ package_name }}
 
 on:
   push:
