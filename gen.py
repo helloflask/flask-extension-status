@@ -6,7 +6,7 @@ import yaml
 basedir = Path(__file__).parent
 
 workflow_template = """
-name: build
+name: {{ package_name }}
 
 on:
   push:
@@ -18,17 +18,13 @@ on:
 
 jobs:
   test:
-    strategy:
-      matrix:
-        python-versions: ['3.12']
-        os: [ubuntu-latest, macos-latest, windows-latest]
-    {% raw %}runs-on: ${{ matrix.os }}{% endraw %}
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: {% raw %}${{ matrix.python-versions }}{% endraw %}
+          python-version: '3.12'
 
       - name: Install dependencies
         run: |
@@ -42,8 +38,8 @@ jobs:
 """
 
 table_header = """
-| Extension Repository | Latest version  |  Downloads | Build with latest Flask (3.x) |
-| -------------------- | --------------- | ---------- | ----------------------------- |"""
+| Extension Repository | Latest version  |  Downloads | Build with latest Flask (3.x) and Python (3.12.x) |
+| -------------------- | --------------- | ---------- | ------------------------------------------------- |"""
 
 table_row_template = "| [{{ repo }}](https://github.com/{{ repo }}) " \
 "| ![PyPI - Version](https://img.shields.io/pypi/v/{{ package_name }}) " \

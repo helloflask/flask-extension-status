@@ -1,5 +1,5 @@
 
-name: build
+name: flask-migrate
 
 on:
   push:
@@ -11,17 +11,13 @@ on:
 
 jobs:
   test:
-    strategy:
-      matrix:
-        python-versions: ['3.12']
-        os: [ubuntu-latest, macos-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: ${{ matrix.python-versions }}
+          python-version: '3.12'
 
       - name: Install dependencies
         run: |
@@ -30,4 +26,4 @@ jobs:
 
       - name: Test initialization
         run:
-          python -c "from flask import Flask; app = Flask(__name__); from flask_migrate import Migrate; Migrate(app, db)"
+          python -c "from flask import Flask; app = Flask(__name__); from flask_sqlalchemy import SQLAlchemy; from flask_migrate import Migrate; app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'; db = SQLAlchemy(app); migrate = Migrate(app, db)"
