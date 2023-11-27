@@ -1,5 +1,4 @@
 
-# sort by name alphabetically
 bootstrap-flask:
   repo: helloflask/bootstrap-flask
   init_string: 'from flask_bootstrap import Bootstrap5; Bootstrap5(app)'
@@ -15,3 +14,48 @@ flask-login:
 flask-mailman:
   repo: waynerv/flask-mailman
   init_string: 'from flask_mailman import Mail; Mail(app)'
+flask-testing:
+  repo: jarus/flask-testing
+  init_string: 'from flask_testing import TestCase; TestCase()'
+flask-restful:
+  repo: flask-restful/flask-restful
+  init_string: 'from flask_restful import Api; api = Api(app)'
+flask-restx:
+  repo: python-restx/flask-restx
+  init_string: 'from flask_restx import Api; api = Api(app)'
+flask-wtf:
+  repo: flask-wtf/flask-wtf
+  init_string: 'from flask_wtf import FlaskForm, CSRFProtect; CSRFProtect(app)'
+flask-migrate:
+  repo: miguelgrinberg/flask-migrate
+  init_string: 'from flask_migrate import Migrate; Migrate(app, db)'
+flask-assets:
+  repo: miracle2k/flask-assets
+  init_string: 'from flask_assets import Environment; Environment(app)'
+flask-babel:
+  repo: python-babel/flask-babel
+  init_string: 'from flask_babel import Babel; Babel(app)'
+flask-cors:
+  repo: corydolphin/flask-cors
+  init_string: 'from flask_cors import CORS; CORS(app)'
+flask-caching:
+  repo: pallets-eco/flask-caching
+  init_string: 'from flask_caching import Cache; Cache(app)'
+flask-moment:
+  repo: miguelgrinberg/flask-moment
+  init_string: 'from flask_moment import Moment; Moment(app)'
+flask-socketio:
+  repo: miguelgrinberg/Flask-SocketIO
+  init_string: 'from flask_socketio import SocketIO; SocketIO(app)'
+flask-whooshee:
+  repo: fedora-copr/flask-whooshee
+  init_string: 'from flask_whooshee import Whooshee; Whooshee(app)'
+flask-apispec:
+  repo: jmcarp/flask-apispec
+  init_string: 'from flask_apispec import use_kwargs, marshal_with'
+flask-marshmallow:
+  repo: marshmallow-code/flask-marshmallow
+  init_string: 'from flask_marshmallow import Marshmallow; Marshmallow(app)'
+flask-rebar:
+  repo: plangrid/flask-rebar
+  init_string: 'from flask_rebar import Rebar; Rebar()'
