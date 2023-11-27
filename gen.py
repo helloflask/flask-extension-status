@@ -53,8 +53,10 @@ table_row_template = "| [{{ repo }}](https://github.com/{{ repo }}) " \
 
 def get_extensions():
     with open(basedir / 'extensions.yml') as f:
-        return yaml.safe_load(f)
-    
+        extensions = yaml.safe_load(f)
+        # sort extensions by name
+        extensions = dict(sorted(extensions.items(), key=lambda item: item[0]))
+        return extensions 
 
 def gen_workflow(package_name, repo, init_string):
     template = Template(workflow_template)
