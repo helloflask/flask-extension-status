@@ -12,8 +12,8 @@ Want to help a Flask extension? Check the [What can I do to help?](#what-can-i-d
 
 <!-- TABLE_START -->
 
-| Extension Repository | Latest version  |  Downloads | Build with latest Flask (3.x) |
-| -------------------- | --------------- | ---------- | ----------------------------- |
+| Extension Repository | Latest version  |  Downloads | Build with latest Flask |
+| -------------------- | --------------- | ---------- | ----------------------- |
 | [helloflask/bootstrap-flask](https://github.com/helloflask/bootstrap-flask) | ![PyPI - Version](https://img.shields.io/pypi/v/bootstrap-flask) | ![PyPI - Downloads](https://img.shields.io/pypi/dm/bootstrap-flask?color=darkgrey) | ![build](https://github.com/greyli/flask-extension-status/actions/workflows/bootstrap-flask.yml/badge.svg) |
 | [helloflask/flask-ckeditor](https://github.com/helloflask/flask-ckeditor) | ![PyPI - Version](https://img.shields.io/pypi/v/flask-ckeditor) | ![PyPI - Downloads](https://img.shields.io/pypi/dm/flask-ckeditor?color=darkgrey) | ![build](https://github.com/greyli/flask-extension-status/actions/workflows/flask-ckeditor.yml/badge.svg) |
 | [pallets-eco/flask-debugtoolbar](https://github.com/pallets-eco/flask-debugtoolbar) | ![PyPI - Version](https://img.shields.io/pypi/v/flask-debugtoolbar) | ![PyPI - Downloads](https://img.shields.io/pypi/dm/flask-debugtoolbar?color=darkgrey) | ![build](https://github.com/greyli/flask-extension-status/actions/workflows/flask-debugtoolbar.yml/badge.svg) |
@@ -33,11 +33,11 @@ pip install -r requirements.txt
 ```
 
 Add the extension info to `extensions.yml`:
-    
+
 ```yaml
-flask-foo:
-  repo: github_username/repo_name
-  import_string: 'the import string of your extension'
+flask-foo:  # PyPI package name
+  repo: github_username/repo_name  # GitHub repository
+  init_string: 'from flask_foo import Foo; Foo(app)'  # extension initialization
 ```
 
 Then run:

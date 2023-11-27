@@ -35,9 +35,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install {{ package_name }} flask
 
-      - name: Test import
+      - name: Test initialization
         run:
-          python -c "{{ import_string }}"
+          python -c "from flask import Flask; app = Flask(__name__); {{ init_string }}"
 
 """
 
@@ -52,17 +52,16 @@ table_row_template = "| [{{ repo }}](https://github.com/{{ repo }}) " \
 
 
 def get_extensions():
-    """get extensions info from extensions.yml"""
     with open(basedir / 'extensions.yml') as f:
         return yaml.safe_load(f)
     
 
-def gen_workflow(package_name, repo, import_string):
+def gen_workflow(package_name, repo, init_string):
     template = Template(workflow_template)
     return template.render(
         package_name=package_name,
         repo=repo,
-        import_string=import_string
+        init_string=init_string
     )
 
 
@@ -101,8 +100,8 @@ def update_readme_table():
 if __name__ == '__main__':
     for package_name, info in get_extensions().items():
         repo = info['repo']
-        import_string = info['import_string']
-        workflow = gen_workflow(package_name, repo, import_string)
+        init_string = info['init_string']
+        workflow = gen_workflow(package_name, repo, init_string)
         with open(basedir / f'.github/workflows/{package_name}.yml', 'w') as f:
             f.write(workflow)
     update_readme_table()

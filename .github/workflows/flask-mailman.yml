@@ -28,6 +28,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install flask-mailman flask
 
-      - name: Test import
+      - name: Test initialization
         run:
-          python -c "from flask_mailman import Mail"
+          python -c "from flask import Flask; app = Flask(__name__); from flask_mailman import Mail; Mail(app)"
