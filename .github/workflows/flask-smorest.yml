@@ -26,4 +26,4 @@ jobs:
 
       - name: Test initialization
         run:
-          python -c "from flask import Flask; app = Flask(__name__); from flask_smorest import Api; Api(app, spec_kwargs={'title': 'dummy', 'version': '3', 'openapi_version': '3'})"
+          python -c "from flask import Flask; app = Flask(__name__); from flask_smorest import Api; Api(app, spec_kwargs=dict(title=str(0), version=str(3), openapi_version=str(3)))"
