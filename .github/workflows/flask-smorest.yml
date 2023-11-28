@@ -1,0 +1,29 @@
+
+name: flask-smorest
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flask-smorest flask
+
+      - name: Test initialization
+        run:
+          python -c "from flask import Flask; app = Flask(__name__); from flask_smorest import Api; Api(app, spec_kwargs={'title': 'dummy', 'version': '3', 'openapi_version': '3'})"
