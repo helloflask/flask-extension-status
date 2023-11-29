@@ -70,4 +70,4 @@ flask-avatars:
   init_string: 'from flask_avatars import Avatars; Avatars(app)'
 flask-smorest:
   repo: marshmallow-code/flask-smorest
-  init_string: 'from flask_smorest import Api; Api(app, spec_kwargs=dict(title=str(0), version=str(3), openapi_version=str(3)))'
+  init_string: 'from flask_smorest import Api; Api(app, spec_kwargs={''title'': ''dummy'', ''version'': ''3'', ''openapi_version'': ''3''})'
