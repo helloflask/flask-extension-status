@@ -32,7 +32,7 @@ jobs:
           pip install {{ package_name }} flask
 
       - name: Test initialization
-        run:
+        run: |
           python -c "from flask import Flask; app = Flask(__name__); {{ init_string }}"
 
 """

@@ -25,5 +25,5 @@ jobs:
           pip install flask-moment flask
 
       - name: Test initialization
-        run:
+        run: |
           python -c "from flask import Flask; app = Flask(__name__); from flask_moment import Moment; Moment(app)"
