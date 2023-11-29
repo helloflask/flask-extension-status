@@ -25,5 +25,5 @@ jobs:
           pip install flask-smorest flask
 
       - name: Test initialization
-        run:
+        run: |
           python -c "from flask import Flask; app = Flask(__name__); from flask_smorest import Api; Api(app, spec_kwargs={'title': 'dummy', 'version': '3', 'openapi_version': '3'})"

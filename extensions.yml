@@ -28,7 +28,7 @@ flask-wtf:
   init_string: 'from flask_wtf import FlaskForm, CSRFProtect; CSRFProtect(app)'
 flask-migrate:
   repo: miguelgrinberg/flask-migrate
-  init_string: 'from flask_sqlalchemy import SQLAlchemy; from flask_migrate import Migrate; app.config[''SQLALCHEMY_DATABASE_URI''] = ''sqlite://''; db = SQLAlchemy(app); migrate = Migrate(app, db)'
+  init_string: "from flask_sqlalchemy import SQLAlchemy; from flask_migrate import Migrate; app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'; db = SQLAlchemy(app); migrate = Migrate(app, db)"
 flask-assets:
   repo: miracle2k/flask-assets
   init_string: 'from flask_assets import Environment; Environment(app)'
@@ -61,7 +61,7 @@ flask-rebar:
   init_string: 'from flask_rebar import Rebar; Rebar()'
 flask-sqlalchemy:
   repo: pallets/flask-sqlalchemy
-  init_string: 'from flask_sqlalchemy import SQLAlchemy; app.config[''SQLALCHEMY_DATABASE_URI''] = ''sqlite://''; db = SQLAlchemy(app)'
+  init_string: "from flask_sqlalchemy import SQLAlchemy; app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'; db = SQLAlchemy(app)"
 flask-mongoengine:
   repo: MongoEngine/flask-mongoengine
   init_string: 'from flask_mongoengine import MongoEngine; db = MongoEngine(app)'

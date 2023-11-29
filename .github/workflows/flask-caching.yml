@@ -25,5 +25,5 @@ jobs:
           pip install flask-caching flask
 
       - name: Test initialization
-        run:
+        run: |
           python -c "from flask import Flask; app = Flask(__name__); from flask_caching import Cache; Cache(app)"
