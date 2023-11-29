@@ -71,3 +71,15 @@ flask-avatars:
 flask-smorest:
   repo: marshmallow-code/flask-smorest
   init_string: "from flask_smorest import Api; Api(app, spec_kwargs={'title': 'dummy', 'version': '3', 'openapi_version': '3'})"
+flask-limiter:
+  repo: alisaifee/flask-limiter
+  init_string: 'from flask_limiter import Limiter; from flask_limiter.util import get_remote_address; Limiter(get_remote_address, app=app)'
+flask-session:
+  repo: pallets-eco/flask-session
+  init_string: 'from flask_session import Session; Session(app)'
+flask-jwt-extended:
+  repo: vimalloc/flask-jwt-extended
+  init_string: 'from flask_jwt_extended import JWTManager; JWTManager(app)'
+flask-bcrypt:
+  repo: maxcountryman/flask-bcrypt
+  init_string: 'from flask_bcrypt import Bcrypt; Bcrypt(app)'

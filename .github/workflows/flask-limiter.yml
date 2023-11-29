@@ -1,0 +1,29 @@
+
+name: flask-limiter
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flask-limiter flask
+
+      - name: Test initialization
+        run: |
+          python -c "from flask import Flask; app = Flask(__name__); from flask_limiter import Limiter; from flask_limiter.util import get_remote_address; Limiter(get_remote_address, app=app)"
