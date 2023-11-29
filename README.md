@@ -50,12 +50,12 @@ For a project that is abandoned/dead, we will remove it from the table and list 
 
 ## Unmaintained extension and alternatives
 
-| Unmaintained Extension  |  Recommended Alternatives |
-| ----------------------- | ------------------------- |
-| [mattupstate/flask-mail](https://github.com/mattupstate/flask-mail) | [waynerv/flask-mailman](https://github.com/waynerv/flask-mailman) |
-| [thadeusb/flask-cache](https://github.com/thadeusb/flask-cache) | [pallets-eco/flask-caching](https://github.com/pallets-eco/flask-caching) |
-| [noirbizarre/flask-restplus](https://github.com/noirbizarre/flask-restplus) | [python-restx/flask-restx](https://github.com/python-restx/flask-restx) |
-| [mbr/flask-bootstrap](https://github.com/mbr/flask-bootstrap) | [helloflask/bootstrap-flask](https://github.com/helloflask/bootstrap-flask) |
+| Unmaintained Extension  | Last commit | Recommended Alternatives |
+| ----------------------- | ----------- | ------------------------ |
+| [mattupstate/flask-mail](https://github.com/mattupstate/flask-mail) | ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mattupstate/flask-mail/master?label=flask-mail) | [waynerv/flask-mailman](https://github.com/waynerv/flask-mailman) |
+| [thadeusb/flask-cache](https://github.com/thadeusb/flask-cache) | ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/thadeusb/flask-cache/master?label=flask-cache) | [pallets-eco/flask-caching](https://github.com/pallets-eco/flask-caching) |
+| [noirbizarre/flask-restplus](https://github.com/noirbizarre/flask-restplus) | ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/noirbizarre/flask-restplus/master?label=flask-restplus) | [python-restx/flask-restx](https://github.com/python-restx/flask-restx) |
+| [mbr/flask-bootstrap](https://github.com/mbr/flask-bootstrap) | ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mbr/flask-bootstrap/master?label=flask-bootstrap) | [helloflask/bootstrap-flask](https://github.com/helloflask/bootstrap-flask) |
 
 
 ## How to add an extension?
