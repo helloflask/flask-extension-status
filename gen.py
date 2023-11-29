@@ -38,11 +38,12 @@ jobs:
 """
 
 table_header = """
-| Extension Repository | Latest version  |  Downloads | Build with latest Flask (3.x) and Python (3.12.x) |
-| -------------------- | --------------- | ---------- | ------------------------------------------------- |"""
+| Extension Repository | Latest version  | Last Commit |  Downloads | Build with latest Flask (3.x) and Python (3.12.x) |
+| -------------------- | --------------- | ----------- | ---------- | ------------------------------------------------- |"""
 
 table_row_template = "| [{{ repo }}](https://github.com/{{ repo }}) " \
 "| ![PyPI - Version](https://img.shields.io/pypi/v/{{ package_name }}) " \
+"| ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/{{ repo }}) " \
 "| ![PyPI - Downloads](https://img.shields.io/pypi/dm/{{ package_name }}?color=darkgrey) " \
 "| [![build](https://github.com/greyli/flask-extension-status/actions/workflows/{{ package_name }}.yml/badge.svg)](https://github.com/greyli/flask-extension-status/actions/workflows/{{ package_name }}.yml) |"
 

@@ -24,7 +24,7 @@ flask-restx:
   repo: python-restx/flask-restx
   init_string: 'from flask_restx import Api; api = Api(app)'
 flask-wtf:
-  repo: flask-wtf/flask-wtf
+  repo: wtforms/flask-wtf
   init_string: 'from flask_wtf import FlaskForm, CSRFProtect; CSRFProtect(app)'
 flask-migrate:
   repo: miguelgrinberg/flask-migrate
