@@ -83,3 +83,9 @@ flask-jwt-extended:
 flask-bcrypt:
   repo: maxcountryman/flask-bcrypt
   init_string: 'from flask_bcrypt import Bcrypt; Bcrypt(app)'
+flask-admin:
+  repo: flask-admin/flask-admin
+  init_string: 'from flask_admin import Admin; Admin(app)'
+flask-apscheduler:
+  repo: viniciuschiele/flask-apscheduler
+  init_string: 'from flask_apscheduler import APScheduler; APScheduler(app)'
