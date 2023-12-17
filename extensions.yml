@@ -89,3 +89,21 @@ flask-admin:
 flask-apscheduler:
   repo: viniciuschiele/flask-apscheduler
   init_string: 'from flask_apscheduler import APScheduler; APScheduler(app)'
+flask-oauthlib:
+  repo: lepture/flask-oauthlib
+  init_string: 'from flask_oauthlib.client import OAuth; OAuth(app)'
+flask-uploads:
+  repo: maxcountryman/flask-uploads
+  init_string: 'from flask_uploads import UploadSet, configure_uploads; configure_uploads(app, UploadSet())'
+flask-inputs:
+ repo: nathancahill/flask-inputs
+ init_string: 'from flask_inputs import Inputs;'
+flask-pydantic:
+  repo: bauerji/flask-pydantic
+  init_string: 'from flask_pydantic import validate;'
+flask-qrcode:
+  repo: marcoagner/Flask-QRcode
+  init_string: 'from flask_qrcode import QRcode;QRcode(app)'
+flask-security:
+  repo: mattupstate/flask-security
+  init_string: 'from flask_security import Security; Security(app)'
