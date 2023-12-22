@@ -107,3 +107,12 @@ flask-qrcode:
 flask-security:
   repo: mattupstate/flask-security
   init_string: 'from flask_security import Security; Security(app)'
+flask-helmet:
+  repo: dillibabukadati/flask-helmet
+  init_string: 'from flask_helmet import FlaskHelmet; FlaskHelmet(app)'
+Flask-Magql:
+  repo: autoinvent/flask-magql
+  init_string: 'import magql; from flask_magql import MagqlExtension; MagqlExtension(magql.Schema())'
+Flask-FomanticUI:
+  repo: juniors90/Flask-FomanticUI
+  init_string: 'from flask_fomanticui import FomanticUI; FomanticUI(app)'
